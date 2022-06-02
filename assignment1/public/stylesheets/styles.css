@@ -1,0 +1,130 @@
+#title,
+#mission-statement{
+    background-color: black;
+}
+
+#logo{
+    height: 9rem;
+}
+
+#welcome-message{
+    padding-top: 5%;
+    background-color: aliceblue;
+}
+
+h1{
+    padding-bottom: 2%;
+}
+
+#mission-statement{
+    color:#BFBFBF;
+    padding-top: 2%;
+    
+
+}
+
+body{
+    background-color: black;
+}
+
+#footer{
+    padding-bottom: 0%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+
+/* Include padding and border in total box size*/
+* {
+    box-sizing: border-box;
+}
+  
+  /* Create two equal columns that float next to each other */
+.column-2 {
+    float: left;
+    width: 45%;
+    padding: 40px;
+    padding-left:70px;
+    padding-right: 70px;
+    height: 475px;
+    margin:30px;
+    margin-right:30px;
+    margin-bottom: 70px;
+    background-color: #FEDE00;
+    line-height:2;
+}
+
+/* Large profile image */
+.large-profile {
+    background: url('/images/my-face.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.file{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.resume{
+    margin-left: 40%;
+}
+
+.projects-text{
+    color: #BFBFBF;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.project-descripton{
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+#services{
+    color: aliceblue;
+    text-align: center;
+}
+
+.card-title,
+.card-text{
+color: black;
+}
+
+.row{
+    margin: 8%;
+}
+
+.react-img{
+    width: 10rem;
+    align-self: center;
+}
+
+.contact-info, .call-to-action-form {
+    text-align: center;
+    color: azure;
+    font-size: 3rem;
+
+}
+
+.form-group>label{
+    color: white;
+}
+.contact-form{
+    width: 50%;
+    margin: auto;
+
+
+}
+
+.action-title{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: white;
+}
+
+.send-button{
+    margin-top: 5%;
+}
