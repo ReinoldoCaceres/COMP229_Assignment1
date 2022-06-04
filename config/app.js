@@ -18,8 +18,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//to use our static files such as css images and resume in the public file
 app.use(express.static(path.join(__dirname, '../public')));
 
+//using indexrouter previously required
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
