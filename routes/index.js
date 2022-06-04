@@ -28,7 +28,7 @@ function projects (req, res, next) {
   res.render('projects', {title: "projects"});
 }
 
-/* GET services page. */
+/* GET projects page. */
 router.get('/projects', projects);
 
 function projects (req, res, next) {
