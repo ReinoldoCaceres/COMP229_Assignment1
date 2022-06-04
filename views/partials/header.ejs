@@ -38,7 +38,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="stylesheets/styles.css" />
-    <title>About Me</title>
+    <title><%= title %></title>
   </head>
   <body>
     <!-- header section -->
@@ -62,16 +62,39 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav ms-auto nav-fill">
               <li class="nav-item">
+                <%if (title == "home") {%>
+                <a class="nav-link active" href="/">Home</a>
+                <%} else {%>
+                <a class="nav-link" href="/">Home</a>
+                  <%}%>
+              </li>
+              <li class="nav-item">
+                <%if (title == "about") {%>
+                <a class="nav-link active" href="/about">About Me</a>
+                <%} else {%>
                 <a class="nav-link" href="/about">About Me</a>
+                  <%}%>
               </li>
               <li class="nav-item">
+                <%if (title == "projects") {%>
+                <a class="nav-link active" href="/projects">Projects</a>
+                <%} else {%>
                 <a class="nav-link" href="/projects">Projects</a>
+                <%}%>
               </li>
               <li class="nav-item">
+                <%if (title == "services") {%>
+                <a class="nav-link active" href="/services">Service</a>
+                <%} else {%>
                 <a class="nav-link" href="/services">Service</a>
+                <%}%>
               </li>
               <li class="nav-item">
+                <%if (title == "contact") {%>
+                <a class="nav-link active" href="/contact">Contact Me</a>
+                <%} else {%>
                 <a class="nav-link" href="/contact">Contact Me</a>
+                <%}%>
               </li>
             </ul>
           </div>

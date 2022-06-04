@@ -5,14 +5,14 @@ var router = express.Router();
 router.get('/', home);
 
 function home (req, res, next) {
-  res.render('index');
+  res.render('index', {title: "home"});
 }
 
 /* GET about page. */
 router.get('/about', about);
 
 function about (req, res, next) {
-  res.render('about');
+  res.render('about', {title: "about"});
 }
 
 
@@ -20,27 +20,27 @@ function about (req, res, next) {
 router.get('/projects', projects);
 
 function projects (req, res, next) {
-  res.render('projects');
+  res.render('projects', {title: "projects"});
 }
 
 /* GET services page. */
 router.get('/projects', projects);
 
 function projects (req, res, next) {
-  res.render('projects');
+  res.render('projects', {title: "projects"});
 }
 
 /* GET services page. */
 router.get('/services', services);
 
 function services (req, res, next) {
-  res.render('services');
+  res.render('services', {title: "services"});
 }
 
 /* GET contact page. */
 router.get('/contact', contact);
 
 function contact (req, res, next) {
-  res.render('contact');
+  res.render('contact', {title: "contact"});
 }
 module.exports = router;
