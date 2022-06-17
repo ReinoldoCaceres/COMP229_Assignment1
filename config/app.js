@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('../routes/index');
+var inventoryRouter = require('../routes/inventory');
+var contactRouter = require('../routes/contact')
 
 //Instantiate Express
 var app = express();
@@ -24,6 +26,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 //using indexrouter previously required
 app.use('/', indexRouter);
+app.use('/inventory', inventoryRouter);
+app.use('/contact',contactRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

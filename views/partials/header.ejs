@@ -101,6 +101,22 @@ Jun 4 -->
                 <a class="nav-link" href="/contact">Contact Me</a>
                 <%}%>
               </li>
+              <li class="nav-item">
+                <%if (title == "Contact List") {%>
+                <a class="nav-link active" href="/contact/list" style="color:black">Contact List</a>
+                <a class="nav-link active" href="/contact/add" style="color:black">Add Contact</a>
+                <%} else {%>
+                <a class="nav-link" href="/contact/list">Contact List</a>
+                <%}%>
+              </li>
+              <li class="nav-item">
+                <%if (title == "Add a new Contact") {%>
+                <a class="nav-link active" href="/contact/add" style="color:black">Add Contact</a>
+                <a class="nav-link active" href="/contact/list" style="color:black">Contact List</a>
+                <%} else {%>
+                <a class="nav-link" href="/contact/add">Add Contact</a>
+                <%}%>
+              </li>
             </ul>
           </div>
         </nav>

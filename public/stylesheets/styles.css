@@ -3,9 +3,10 @@ Reinoldo Caceres
 301176428
 Jun 4 */
 
+
 #title,
 #mission-statement{
-    background-color: black;
+    background-color: black !important;
 }
 
 #logo{
