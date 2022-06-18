@@ -11,6 +11,7 @@ module.exports.contactList = function (req, res, next) {
         res.render("contact/list", {
           title: "Contact List",
           ContactList: contactList,
+          userName:req.user ? req.user.username : ''
         });
       }
     })
@@ -28,6 +29,8 @@ module.exports.displayEditPage = (req, res, next) => {
       res.render("contact/add_edit", {
         title: "Edit List",
         contact: contactToEdit,
+        userName:req.user ? req.user.username : ''
+
       });
     }
   });
@@ -73,6 +76,7 @@ module.exports.displayAddPage = (req, res, next) => {
   res.render("contact/add_edit", {
     title: "Add a new Contact",
     contact: newContact,
+    userName:req.user ? req.user.username : ''
   });
 };
 

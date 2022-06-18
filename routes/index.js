@@ -10,14 +10,14 @@ var router = express.Router();
 router.get('/', home);
 
 function home (req, res, next) {
-  res.render('index', {title: "home"});
+  res.render('index', {title: "home", userName: req.user ? req.user.username : ''});
 }
 
 /* GET about page. */
-router.get('/about', about);
+router.get('/about', about); 
 
 function about (req, res, next) {
-  res.render('about', {title: "about"});
+  res.render('about', {title: "about", userName: req.user ? req.user.username : ''});
 }
 
 
@@ -25,27 +25,27 @@ function about (req, res, next) {
 router.get('/projects', projects);
 
 function projects (req, res, next) {
-  res.render('projects', {title: "projects"});
+  res.render('projects', {title: "projects", userName: req.user ? req.user.username : ''});
 }
 
 /* GET projects page. */
 router.get('/projects', projects);
 
 function projects (req, res, next) {
-  res.render('projects', {title: "projects"});
+  res.render('projects', {title: "projects", userName: req.user ? req.user.username : ''});
 }
 
 /* GET services page. */
 router.get('/services', services);
 
 function services (req, res, next) {
-  res.render('services', {title: "services"});
+  res.render('services', {title: "services", userName: req.user ? req.user.username : ''});
 }
 
 /* GET contact page. */
 router.get('/contact', contact);
 
 function contact (req, res, next) {
-  res.render('contact', {title: "contact"});
+  res.render('contact', {title: "contact", userName: req.user ? req.user.username : ''});
 }
 module.exports = router;

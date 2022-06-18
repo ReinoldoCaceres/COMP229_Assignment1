@@ -42,7 +42,7 @@ Jun 4 -->
       src="https://kit.fontawesome.com/33c78d6d06.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
     <title><%= title %></title>
   </head>
   <body>
@@ -52,7 +52,11 @@ Jun 4 -->
         <!-- Nav Bar -->
 
         <nav class="navbar navbar-expand-lg navbar-dark">
-          <a href="/" class="nav-link px-2 text-muted"><img id="logo" src="images/white-logo-no-bg.png" /></a>
+          <%if(title== "Contact List" || title === "Add a new Contact") {%>
+          <a href="/" class="nav-link px-2 text-muted"><img id="logo" src="/images/mongo-logo.png" style="height: 150px";"/></a>
+          <%} else {%>
+            <a href="/" class="nav-link px-2 text-muted"><img id="logo" src="/images/white-logo-no-bg.png" style="height: 150px";"/></a>
+          <%}%>
           <button
             class="navbar-toggler"
             type="button"
@@ -103,19 +107,24 @@ Jun 4 -->
               </li>
               <li class="nav-item">
                 <%if (title == "Contact List") {%>
-                <a class="nav-link active" href="/contact/list" style="color:black">Contact List</a>
-                <a class="nav-link active" href="/contact/add" style="color:black">Add Contact</a>
+                <a class="nav-link active" href="/contact/list">Contact List</a>
                 <%} else {%>
                 <a class="nav-link" href="/contact/list">Contact List</a>
                 <%}%>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <%if (title == "Add a new Contact") {%>
-                <a class="nav-link active" href="/contact/add" style="color:black">Add Contact</a>
-                <a class="nav-link active" href="/contact/list" style="color:black">Contact List</a>
+                <a class="nav-link active" href="/contact/add">Add Contact</a>
                 <%} else {%>
                 <a class="nav-link" href="/contact/add">Add Contact</a>
                 <%}%>
+              </li> -->
+              <li>
+                <%if (typeof userName === 'string' && userName){%>
+                  <a class="nav-link" href="/users/signout">Sign Out (<%= userName %>)</a>
+                <%} else {%>
+                  <a class="nav-link" href="/users/signin">Signin</a>
+                  <%}%>
               </li>
             </ul>
           </div>

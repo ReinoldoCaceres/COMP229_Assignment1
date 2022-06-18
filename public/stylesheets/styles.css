@@ -4,6 +4,10 @@ Reinoldo Caceres
 Jun 4 */
 
 
+tbody, td, tfoot, th, thead, tr, .h1{
+    color: white;
+}
+
 #title,
 #mission-statement{
     background-color: black !important;
