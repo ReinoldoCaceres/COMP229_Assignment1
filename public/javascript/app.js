@@ -1,3 +1,8 @@
+/* styles.css
+Reinoldo Caceres
+301176428
+Jun 18 */
+
 if(getTitle == "Sign-up Form")
 {
     const confirm = document.querySelector('input[name=password_confirm]');
