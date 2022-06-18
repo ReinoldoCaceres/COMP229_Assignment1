@@ -26,5 +26,6 @@
     "MEAN"
   ],
   "author": "Reinoldo Caceres",
-  "license": "MIT"
+  "license": "MIT",
+  "node":   "16.13.2"
 }
